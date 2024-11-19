@@ -1,0 +1,111 @@
+.hotel-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #fff;
+    max-width: 350px;
+  }
+  
+  .hotel-carousel {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .hotel-details {
+    text-align: center;
+  }
+  
+  .hotel-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .hotel-location {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .hotel-amenities {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .hotel-amenities h4 {
+    margin-bottom: 5px;
+  }
+  
+  .hotel-amenities ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .hotel-ratings {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .room-selection {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .room-types {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .room-button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .room-button.selected {
+    background-color: #45a049;
+  }
+  
+  .booking-dates {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .booking-dates input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .book-now-button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .book-now-button:hover {
+    background-color: #e68900;
+  }
+  

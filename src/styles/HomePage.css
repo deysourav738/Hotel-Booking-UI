@@ -1,0 +1,120 @@
+/* Basic layout for the home page */
+.home-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f4f4f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.auth {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-button:hover {
+    background-color: #e68900;
+}
+
+/* Center the search bar */
+.search-bar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;  /* Center the search bar */
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 250px; /* Set a fixed width for inputs */
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* Hero section */
+.hero-section {
+    background-image: url('../assets/images/home_page_hero_section_bg.jpg');  /* Use a real image URL */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #333;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 10px 25px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}

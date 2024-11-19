@@ -1,0 +1,195 @@
+/* src/styles/BrowseHotels.css */
+
+.browse-hotels-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Background color for the page */
+  }
+  
+  .browse-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .hotel-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10px; /* Ensure there is some padding around the grid */
+  }
+  
+  .hotel-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hotel-card-header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .hotel-card-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .hotel-card-carousel img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .hotel-card-body {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .hotel-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .hotel-location {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .hotel-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .amenity {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  
+  .hotel-rating {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ff9800;
+  }
+  
+  .room-selection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .room-selection select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .booking-button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .booking-button:hover {
+    background-color: #e68900;
+  }
+  
+  /* src/styles/BrowseHotels.css */
+
+/* Date Selection */
+.date-selection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .date-inputs {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .date-inputs label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .date-inputs input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .date-inputs input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  .date-inputs input:focus {
+    border-color: #ff9800;
+  }
+
+  /* src/styles/BrowseHotels.css */
+
+.back-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+  }
+  
+  .back-button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .browse-hotels-container {
+    padding: 20px;
+  }
+  
+  .browse-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
