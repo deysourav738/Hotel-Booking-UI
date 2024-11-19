@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Hotel Booking UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Hotel Booking UI** project! This is a simple, responsive front-end interface for a hotel booking website. It provides users with the ability to browse hotels, filter results based on search criteria, and view detailed information about each hotel. The project includes features such as hotel image carousels, available amenities, room prices, and booking options.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Home Page**: 
+  - Search functionality to filter hotels by location, date, and room type.
+  - Navigation to Login and Sign-Up pages for authentication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Login and Sign-Up Pages**: 
+  - User authentication through login and sign-up forms.
+  - After successful sign-up or login, the home page will display the user's name.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Browse Hotels Page**:
+  - Displays hotel cards with detailed information such as:
+    - Multiple photos in a carousel.
+    - Hotel name and location highlighted.
+    - Available amenities (Wi-Fi, pool, gym, etc.).
+    - Hotel rating.
+    - Prices for different room types.
+  - Ability to select room types (Single, Double, Suite) and view prices.
+  - Input to select check-in and check-out dates, with availability checks for selected dates.
+  - Book Now button to simulate booking.
 
-### `npm test`
+- **Responsive Design**:
+  - The UI is responsive, ensuring a good user experience on both desktop and mobile devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/your-username/hotel-booking-ui.git
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install Dependencies
+Navigate into the project directory and install the required dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd hotel-booking-ui
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Run the Development Server
+Start the development server to view the application in your browser:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
+This will open the application in your default web browser at http://localhost:3000.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React: JavaScript library for building user interfaces.
+- React Router: For routing between pages (Home, Login, Sign Up, Browse Hotels).
+- CSS: For styling the UI components.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Home Page:
+- Enter the location, select dates, and choose the number of rooms.
+- Click the "Browse Hotels" button to navigate to the Browse Hotels page with the selected filters.
+### Browse Hotels Page:
+- Browse through the hotel cards that display images, amenities, ratings, and prices.
+- Choose room types (Single, Double, Suite) and input dates to check availability.
+- Use the "Book Now" button to simulate the booking process.
+### Login/Sign-Up Pages:
+- Create a new user or login to an existing one.
+- After successful login/sign-up, the home page will show the user's name.
