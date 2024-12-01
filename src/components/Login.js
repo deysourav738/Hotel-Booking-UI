@@ -10,11 +10,10 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Mock validation - Replace with actual API call
-    if (email === 'user@example.com' && password === 'password123') {
-      login({ name: 'John Doe', email }); // Update user context
+    const resp = await login({email,password});
+    if (resp.status) {
       navigate('/'); // Redirect to Home page
     } else {
       setErrorMessage('Invalid credentials. Please try again.');

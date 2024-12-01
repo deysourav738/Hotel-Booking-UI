@@ -20,7 +20,7 @@ const SignUp = () => {
       return;
     }
     // Mock sign-up - Replace with actual API call or logic
-    signup({ name, email }); // Save user data to context or API
+    signup({ name, email, password}); // Save user data to context or API
     alert(`Welcome, ${name}! Sign Up Successful!`);
     navigate('/'); // Redirect to Home page after successful signup
   };
