@@ -4,6 +4,7 @@ const SIGNUP_URL = "/auth/register";
 const LOGIN_URL = "/auth/login";
 const AUTH_USER_URL = "/auth/user";
 const LOGOUT_URL = "/auth/logout";
+const HOTEL_URL = "/hotels";
 
 const request = async (url, options = {}) => {
   const response = await fetch(`${API_HOST}${url}`, options);
@@ -68,5 +69,6 @@ export const auth_user_api = async (data) => {
 }
 
 export const logout_api = () => get(LOGOUT_URL);
+export const get_all_hotels_api = async () => await get(HOTEL_URL);
 
 

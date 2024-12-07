@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import HotelCard from './HotelCard'; // Import the HotelCard component
 import '../styles/BrowseHotels.css'; // Import custom styles
+import { get_all_hotels_api } from '../utils/api';
 
 const BrowseHotels = () => {
-  const [hotelData, setHotelData] = useState([]);
+  const [hotels, setHotels] = useState([]);
   const [filteredHotels, setFilteredHotels] = useState([]);
-  const location = useLocation(); // To access the current location (URL)
-  const navigate = useNavigate();  // To handle navigation
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // Extract query parameters from the URL
   const queryParams = new URLSearchParams(location.search);
@@ -16,34 +17,13 @@ const BrowseHotels = () => {
   const dateFilter = queryParams.get('date');
   const roomsFilter = queryParams.get('rooms');
 
-  // Sample hotel data (replace with actual data)
-  const hotels = [
-    {
-      name: 'Hotel Sunshine',
-      location: 'New York, NY',
-      photos: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150', 'https://via.placeholder.com/150'],
-      amenities: ['Free Wi-Fi', 'Swimming Pool', 'Gym', 'Free Breakfast'],
-      rating: 4.5,
-      roomTypes: [
-        { type: 'Single', price: 100 },
-        { type: 'Double', price: 150 },
-        { type: 'Suite', price: 250 },
-      ],
-    },
-    {
-      name: 'Beach Resort',
-      location: 'Los Angeles, CA',
-      photos: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150', 'https://via.placeholder.com/150'],
-      amenities: ['Beachfront', 'Free Wi-Fi', 'Pool', 'Spa'],
-      rating: 4.7,
-      roomTypes: [
-        { type: 'Single', price: 120 },
-        { type: 'Double', price: 170 },
-        { type: 'Suite', price: 300 },
-      ],
-    },
-    // Add more hotels here...
-  ];
+  useEffect(()=>{
+    async function fetchHotels() {
+      let resp = await get_all_hotels_api();
+      if(resp) setHotels(resp);
+    }
+    fetchHotels();
+  },[]);
 
   useEffect(() => {
     // Filter hotels based on the search parameters

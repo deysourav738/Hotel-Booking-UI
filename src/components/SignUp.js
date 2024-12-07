@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext'; // Assuming you have this context
 import '../styles/Auth.css';
 
@@ -9,6 +9,10 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const role = queryParams.get('role');
   
   const { signup } = useAuth();  // Assuming you have signup method in your Auth context
   const navigate = useNavigate();
@@ -19,15 +23,18 @@ const SignUp = () => {
       setErrorMessage('Passwords do not match!');
       return;
     }
-    // Mock sign-up - Replace with actual API call or logic
-    signup({ name, email, password}); // Save user data to context or API
-    alert(`Welcome, ${name}! Sign Up Successful!`);
-    navigate('/'); // Redirect to Home page after successful signup
+    let userRole = (role == null) ? "USER": "ADMIN";
+    signup({ name, email, password, "role":userRole});
+    navigate('/');
   };
 
   return (
     <div className="auth-container">
-      <h2>Sign Up</h2>
+      {role === 'admin' ? (
+        <h2>Register as a Hotel Owner</h2>
+      ) : (
+        <h2>Sign up</h2>
+      )}
       <form onSubmit={handleSignUp} className="auth-form">
         <input
           type="text"

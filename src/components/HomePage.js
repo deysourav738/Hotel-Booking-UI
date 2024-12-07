@@ -7,26 +7,22 @@ const HomePage = () => {
   const { user, logout } = useAuth();
   const [location, setLocation] = useState('');
   const [date, setDate] = useState('');
-  const [rooms, setRooms] = useState(1);
+  const [rooms, setRooms] = useState('');
   const navigate = useNavigate();
 
   const handleSearch = () => {
     console.log('Searching hotels with', { location, date, rooms });
-        // Create a query string with the search filters
-        const queryParams = new URLSearchParams({
-          location,
-          date,
-          rooms,
-        }).toString();
-    
-        // Navigate to BrowseHotels page with query parameters
-        navigate(`/browse?${queryParams}`);
+    const queryParams = new URLSearchParams({
+      location,
+      date,
+      rooms,
+    }).toString();
+    navigate(`/browse?${queryParams}`);
   };
 
   const handleBrowse = () => {
-    // call api to fetch data
     navigate('/browse');
-  }
+  };
 
   return (
     <div className="home-container">
@@ -36,7 +32,12 @@ const HomePage = () => {
         <div className="auth">
           {user ? (
             <>
-              <span>Welcome, {user.name}</span>
+              <span className='m-auto'>Welcome, {user.name}</span>
+              {user.role === 'ADMIN' && (
+                <Link to="/admin" className="admin-link">
+                  <button className="cta-button"> Admin Dashboard </button>
+                </Link>
+              )}
               <button className="auth-button" onClick={logout}>
                 Logout
               </button>
@@ -86,12 +87,19 @@ const HomePage = () => {
       <div className="hero-section">
         <h1>Welcome to StayEase!</h1>
         <p>Your perfect hotel, just a click away.</p>
-        <button className="cta-button" onClick={handleBrowse}>Browse Hotels</button>
+        <button className="cta-button" onClick={handleBrowse}>
+          Browse Hotels
+        </button>
       </div>
 
       {/* Footer */}
       <footer className="footer">
         <p>&copy; 2024 StayEase. All rights reserved.</p>
+        {!user && (
+          <Link to="/signup?role=admin" className="register-link">
+            Register Your Hotel
+          </Link>
+        )}
       </footer>
     </div>
   );
